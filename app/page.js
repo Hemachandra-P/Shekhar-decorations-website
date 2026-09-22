@@ -119,9 +119,22 @@ export default function Home() {
             <img src="/shekar-events-logo.png" alt="Shekhar Events logo" />
             <span><b>SHEKHAR EVENTS</b><small>{t.tagline}</small></span>
           </button>
-          <nav className={menu ? 'nav open' : 'nav'}>
-            {t.nav.map((x, i) => <button key={x} onClick={() => scrollTo(['home', 'about', 'services', 'gallery', 'contact'][i])}>{x}</button>)}
-          </nav>
+         <nav className={menu ? 'nav open' : 'nav'}>
+  {t.nav.map((x, i) => (
+    <button
+      key={x}
+      onClick={() =>
+        scrollTo(['home', 'about', 'services', 'gallery', 'contact'][i])
+      }
+    >
+      {x}
+    </button>
+  ))}
+
+  <a className="mobile-admin-link" href="/admin">
+    🔐 Admin
+  </a>
+</nav>
           <div className="actions">
             <div className="lang"><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button><span>/</span><button className={lang === 'te' ? 'active' : ''} onClick={() => setLang('te')}>TE</button></div>
             <a className="admin-link" href="/admin" aria-label="Admin">Admin</a>
