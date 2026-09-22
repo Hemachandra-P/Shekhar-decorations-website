@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS photos (
+  id BIGSERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  url TEXT NOT NULL,
+  public_id TEXT NOT NULL UNIQUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS photos_created_at_idx ON photos (created_at DESC);

@@ -1,0 +1,4 @@
+Supabase has been removed from this version.
+Database: Neon PostgreSQL.
+Image storage/CDN: Cloudinary.
+Admin authentication: secure HttpOnly cookie with ADMIN_PASSWORD (default local password admin123).
