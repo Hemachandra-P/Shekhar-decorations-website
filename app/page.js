@@ -81,11 +81,23 @@ export default function Home() {
   useEffect(() => {
     let cancelled = false;
     fetch('/api/photos', { cache: 'no-store' })
-      .then((r) => r.ok ? r.json() : { photos: [] })
-      .then(({ photos }) => {
-        if (!cancelled && Array.isArray(photos) && photos.length) setPhotos(photos);
-      })
-      .catch(() => {});
+  .then(async (r) => {
+    const data = await r.json();
+
+    if (!r.ok) {
+      throw new Error(data.error || 'Failed to load photos');
+    }
+
+    return data;
+  })
+  .then(({ photos }) => {
+    if (!cancelled && Array.isArray(photos)) {
+      setPhotos(photos);
+    }
+  })
+  .catch((error) => {
+    console.error('Gallery loading error:', error);
+  });
     return () => { cancelled = true; };
   }, []);
 
