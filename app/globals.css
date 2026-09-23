@@ -51,3 +51,26 @@
     margin-top: 8px;
   }
 }
+.whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.mobile-contact a[aria-label="WhatsApp"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-contact a[aria-label="WhatsApp"] svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
