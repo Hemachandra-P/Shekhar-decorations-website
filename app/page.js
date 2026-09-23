@@ -208,7 +208,7 @@ export default function Home() {
           <div><div className="eyebrow">{t.contactEyebrow}</div><h2>{t.contactTitle}</h2><p>{t.contactText}</p></div>
           <div className="contact-actions">
             <a className="contact-card" href={phoneHref}><span>☎</span><div><small>{t.call}</small><b>+91 {PHONE}</b></div><i>↗</i></a>
-            <a className="contact-card" href={whatsappHref} target="_blank" rel="noreferrer"><span>◉</span><div><small>{t.whatsapp}</small><b>+91 {PHONE}</b></div><i>↗</i></a>
+            <a className="contact-card" href={whatsappHref} target="_blank" rel="noreferrer"><span className="whatsapp-icon">◉</span><div><small>{t.whatsapp}</small><b>+91 {PHONE}</b></div><i>↗</i></a>
             <div className="location-card"><span>⌖</span><div><small>{t.location}</small><b>{t.locationValue}</b></div></div>
           </div>
         </div>
