@@ -215,7 +215,7 @@ export default function Home() {
       </section>
 
       <footer><div className="footer-brand"><img src="/shekar-events-logo.png" alt="" /> <span>SHEKHAR EVENTS</span></div><p>{t.footer}</p><small>{t.rights}</small></footer>
-      <div className="mobile-contact"><a href={phoneHref} aria-label="Call">☎</a><a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp">◉</a></div>
+      <div className="mobile-contact"><a href={phoneHref} aria-label="Call">☎</a><a href={whatsappHref} target="_blank" rel="noreferrer" aria-label="WhatsApp">   <svg viewBox="0 0 24 24" aria-hidden="true">     <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7c1.8 1 3.5 1.5 5.5 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.2-3.6-8.5Zm-8.4 18.2h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.9 1 1-3.8-.2-.3a9.7 9.7 0 1 1 8.3 4.6Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.9-.9-3.2-1.7-4.5-3.8-.3-.5.3-.4.9-1.4.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.8.8.4 1.4.6 1.9.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3Z"/>   </svg> </a></div>
 
       {selected && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={selected.title} onClick={() => setSelected(null)}>
